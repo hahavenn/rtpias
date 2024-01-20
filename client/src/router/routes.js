@@ -18,9 +18,14 @@ const routes = [
   // основной маршрут
   {
     path: INDEX_ROUTE_PATHS._,
-    // component: async () => await import(""),
+    component: () => import("@/components/Navigation/NavSections.vue"),
     name: INDEX_ROUTE_NAMES.INDEX,
     alias: [...INDEX_ROUTE_ALIAS],
+    props: () => ({
+      list_title: ["Предметы"],
+      list_description: ["Перечень дисциплин, которым обучают на кафедре"],
+      list_path: ["subjects"],
+    }),
   },
   // другие машруты
 ];
