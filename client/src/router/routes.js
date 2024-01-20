@@ -9,7 +9,11 @@ const INDEX_ROUTE_PATHS = {
 };
 
 // псевдонимы основного маршрута
-const INDEX_ROUTE_ALIAS = ["/home", "/index", "/main"];
+const INDEX_ROUTE_ALIAS = {
+  HOME: "/home",
+  INDEX: "/index",
+  MAIN: "/main",
+};
 
 export { INDEX_ROUTE_NAMES, INDEX_ROUTE_ALIAS, INDEX_ROUTE_PATHS };
 
@@ -20,7 +24,7 @@ const routes = [
     path: INDEX_ROUTE_PATHS._,
     component: () => import("@/components/Navigation/NavSections.vue"),
     name: INDEX_ROUTE_NAMES.INDEX,
-    alias: [...INDEX_ROUTE_ALIAS],
+    alias: [...Object.values(INDEX_ROUTE_ALIAS)],
     props: () => ({
       list_title: ["Предметы"],
       list_description: ["Перечень дисциплин, которым обучают на кафедре"],
