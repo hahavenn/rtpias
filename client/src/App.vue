@@ -40,6 +40,14 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
 
   --font-weight-regular: 400;
   --font-weight-bold: 700;
+
+  --border-radius-default: 5px;
+}
+
+/* шрифты */
+@font-face {
+  font-family: "Play";
+  src: url(./assets/fonts/Play-Regular.ttf);
 }
 
 /* основные стили */
@@ -47,6 +55,7 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Play";
 }
 
 html {
@@ -80,6 +89,7 @@ html {
 
   main {
     flex-grow: 1;
+    width: var(--width-desktop);
   }
 
   .icon {
