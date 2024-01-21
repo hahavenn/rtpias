@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="section">
-      <LogoUI />
+      <LogoUI @click="router.push(INDEX_ROUTE.PATH)" />
       <SearchFunc />
     </div>
     <div class="section">
@@ -30,6 +30,7 @@ import IconWrapperUI from "@/components/UI/IconWrapperUI.vue";
 import SwitcherFunc from "@/components/Func/SwitcherFunc.vue";
 
 import useStylesStore from "@/stores/useStylesStore.js";
+import router, { INDEX_ROUTE } from "@/router";
 
 const stylesStore = useStylesStore();
 </script>
