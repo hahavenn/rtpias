@@ -34,7 +34,7 @@ import SearchIcon from "@/components/UI/Icons/SearchIcon.vue";
 
   input {
     border: 2px solid var(--color-default);
-    border-radius: 8px;
+    border-radius: var(--border-radius-default);
     font-size: var(--font-size-small);
     padding: 0 10px;
     height: 40px;

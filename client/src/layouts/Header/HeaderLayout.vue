@@ -22,12 +22,12 @@
 
 <script setup>
 import LogoUI from "@/components/UI/Images/LogoUI.vue";
-import SearchFunc from "@/components/Func/SearchFunc.vue";
+import SearchFunc from "@/components/Func/Search/SearchFunc.vue";
 import ProfileIcon from "@/components/UI/Icons/ProfileIcon.vue";
 import SunIcon from "@/components/UI/Icons/SunIcon.vue";
 import MoonIcon from "@/components/UI/Icons/MoonIcon.vue";
 import IconWrapperUI from "@/components/UI/IconWrapperUI.vue";
-import SwitcherFunc from "@/components/Func/SwitcherFunc.vue";
+import SwitcherFunc from "@/components/Func/Switcher/SwitcherFunc.vue";
 
 import useStylesStore from "@/stores/useStylesStore.js";
 import router, { INDEX_ROUTE } from "@/router";
