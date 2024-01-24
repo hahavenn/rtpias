@@ -30,7 +30,7 @@ const router = createRouter({
     // основной маршрут
     {
       path: INDEX_ROUTE.PATH,
-      component: () => import("@/components/Navigation/NavSections.vue"),
+      component: () => import("@/components/Navigation/index/IndexSections.vue"),
       name: INDEX_ROUTE.NAME,
       alias: [...Object.values(INDEX_ROUTE.ALIASES)],
       props: () => ({ ...props_NavSectionsVue }),
