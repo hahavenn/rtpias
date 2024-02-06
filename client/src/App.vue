@@ -80,6 +80,11 @@ html {
   }
 }
 
+.icon {
+  width: var(--icon-size-default);
+  height: var(--icon-size-default);
+}
+
 #app {
   /* конец переменных для сайта */
   display: flex;
@@ -91,11 +96,6 @@ html {
   main {
     flex-grow: 1;
     width: var(--width-desktop);
-  }
-
-  .icon {
-    width: var(--icon-size-default);
-    height: var(--icon-size-default);
   }
 }
 </style>
