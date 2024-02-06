@@ -41,7 +41,7 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
-  --border-radius-default: 5px;
+  --border-radius-default: 8px;
 }
 
 /* шрифты */
