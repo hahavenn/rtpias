@@ -33,7 +33,7 @@ section {
   }
 
   span {
-    font-size: var(--font-size-default);
+    font-size: var(--font-size-medium);
   }
 
   p {

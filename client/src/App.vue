@@ -33,9 +33,10 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
 
   --transition-default: 0.15s;
 
-  --font-size-small: 16px;
-  --font-size-default: 20px;
-  --font-size-medium: 30px;
+  --font-size-small: 12px;
+  --font-size-default: 16px;
+  --font-size-medium: 20px;
+  --font-size-big: 30px;
   --font-size-giant: 40px;
 
   --font-weight-regular: 400;
