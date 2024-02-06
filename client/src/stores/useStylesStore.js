@@ -11,8 +11,18 @@ export default defineStore("stylesStore", () => {
     return isLightTheme.value;
   }
 
+  // показ модального окна
+  const isModalVisible = ref(false);
+  function toggleModalVisibility() {
+    isModalVisible.value = !isModalVisible.value;
+
+    return isModalVisible.value;
+  }
+
   return {
     isLightTheme,
     toggleTheme,
+    isModalVisible,
+    toggleModalVisibility,
   };
 });
