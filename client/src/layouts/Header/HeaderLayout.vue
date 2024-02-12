@@ -13,9 +13,7 @@
           <MoonIcon />
         </template>
       </SwitcherFunc>
-      <IconWrapperUI :isHover="true" :cursorPointer="true">
-        <ProfileIcon />
-      </IconWrapperUI>
+      <IconProfileUser />
     </div>
   </header>
 </template>
@@ -23,11 +21,10 @@
 <script setup>
 import LogoUI from "@/components/UI/Images/LogoUI.vue";
 import SearchFunc from "@/components/Func/Search/SearchFunc.vue";
-import ProfileIcon from "@/components/UI/Icons/ProfileIcon.vue";
 import SunIcon from "@/components/UI/Icons/SunIcon.vue";
 import MoonIcon from "@/components/UI/Icons/MoonIcon.vue";
-import IconWrapperUI from "@/components/UI/IconWrapperUI.vue";
 import SwitcherFunc from "@/components/Func/Switcher/SwitcherFunc.vue";
+import IconProfileUser from "@/components/User/IconProfileUser.vue";
 
 import useStylesStore from "@/stores/useStylesStore.js";
 import router, { INDEX_ROUTE } from "@/router";
