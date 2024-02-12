@@ -1,5 +1,12 @@
 <template>
-  <input v-model="model" :placeholder="props.placeholder" :required="props.required" />
+  <input
+    v-model="model"
+    :placeholder="props.placeholder"
+    :required="props.required"
+    :type="props.type"
+    :minLength="props.minLength"
+    :maxLength="maxLength"
+  />
 </template>
 
 <script setup>
@@ -19,6 +26,10 @@ const props = defineProps({
   required: {
     type: Boolean,
     default: false,
+  },
+  type: {
+    type: String,
+    default: "text",
   },
 });
 
