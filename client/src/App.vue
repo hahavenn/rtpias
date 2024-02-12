@@ -26,6 +26,7 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
   --color-white: #fff;
   --color-black: #000;
   --color-gray: #888888;
+  --color-error: #c82121;
 
   --width-desktop: 1400px;
   --width-tablet: 786px;
@@ -43,6 +44,13 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
   --font-weight-bold: 700;
 
   --border-radius-default: 8px;
+
+  --border-width-small: 1px;
+  --border-width-default: 2px;
+
+  --input-height: 44px;
+
+  --z-index_modal: 9999;
 }
 
 /* шрифты */
