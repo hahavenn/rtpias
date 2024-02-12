@@ -25,7 +25,7 @@ const stylesStore = useStylesStore();
   width: 100%;
   height: 100%;
 
-  z-index: 9999;
+  z-index: var(--index_modal);
 
   background-color: rgba(0, 0, 0, 0.5);
 
@@ -77,9 +77,6 @@ const stylesStore = useStylesStore();
 
       &:hover {
         cursor: pointer;
-
-        background-color: var(--color-hover-default);
-        transition: var(--transition-default) all;
       }
     }
   }
