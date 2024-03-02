@@ -13,7 +13,7 @@
           <MoonIcon />
         </template>
       </SwitcherFunc>
-      <IconProfileUser />
+      <UserProfile />
     </div>
   </header>
 </template>
@@ -26,7 +26,7 @@ import MoonIcon from "@/components/UI/Icons/MoonIcon.vue";
 import SearchFunc from "@/components/Func/Search/SearchFunc.vue";
 import SwitcherFunc from "@/components/Func/Switcher/SwitcherFunc.vue";
 
-import IconProfileUser from "@/components/User/IconProfileUser.vue";
+import UserProfile from "@/components/User/UserProfile.vue";
 
 import useStylesStore from "@/stores/useStylesStore.js";
 
