@@ -40,22 +40,22 @@ const model = defineModel();
 input {
   --input-padding-left-right: 13px;
 
-  height: var(--input-height);
+  height: var(--v1-input-button_height_1);
   width: 100%;
 
   outline: none;
-  border: var(--border-width-small) solid var(--color-default);
-  border-radius: var(--border-radius-default);
+  border: var(--v1-border-width_small) solid var(--v1-color_default_1);
+  border-radius: var(--v1-border-radius_default);
 
-  font-size: var(--font-size-default);
+  font-size: var(--v1-font-size_default);
   padding: 0 var(--input-padding-left-right);
 
   &:focus {
-    border-color: var(--color-active-default);
+    border-color: var(--v1-color_active_1);
   }
 
   &:hover {
-    border-color: var(--color-active-default);
+    border-color: var(--v1-color_active_1);
   }
 }
 </style>
