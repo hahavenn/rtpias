@@ -7,23 +7,31 @@
 
 <style scoped>
 .logo {
+  --logo_gap: 10px;
+  --logo_padding_left-right: 10px;
+
   display: flex;
   flex-direction: row;
-  width: fit-content;
   justify-content: flex-start;
-  gap: 10px;
   align-items: center;
+  gap: var(--logo_gap);
+
+  width: fit-content;
   height: 100%;
-  cursor: pointer;
-  padding: 0 10px;
+
+  padding: 0 var(--logo_padding_left-right);
+
+  &:hover {
+    cursor: pointer;
+  }
 
   span {
-    font-size: 26px;
+    font-size: var(--v1-font-size_big);
   }
 
   img {
-    width: 40px;
-    height: 40px;
+    width: var(--v1-logo-width__desktop);
+    height: var(--v1-logo-height__desktop);
   }
 }
 </style>

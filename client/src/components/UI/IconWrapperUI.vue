@@ -1,5 +1,9 @@
 <template>
-  <div class="icon_wrapper" :class="{ hoverClass: isHover }" :style="componentStyle">
+  <div
+    class="icon_wrapper"
+    :class="{ hoverClass: isHover }"
+    :style="componentStyle"
+  >
     <slot></slot>
   </div>
 </template>
@@ -39,7 +43,7 @@ const componentStyle = reactive({
 
 <style scoped>
 .icon_wrapper {
-  border: 2px solid var(--color-default);
+  border: var(--v1-border-width_default) solid var(--v1-color_default_1);
   border-radius: 50%;
 
   display: flex;
@@ -50,8 +54,7 @@ const componentStyle = reactive({
 
 .hoverClass {
   &:hover {
-    border-color: var(--color-active-default);
-    transition: all 0.15;
+    border-color: var(--v1-color_active_1);
   }
 }
 </style>

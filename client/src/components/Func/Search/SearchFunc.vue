@@ -1,6 +1,9 @@
 <template>
   <div class="search">
-    <input type="text" placeholder="поиск" />
+    <input
+      type="text"
+      placeholder="поиск"
+    />
 
     <div class="css-icon">
       <SearchIcon />
@@ -19,36 +22,54 @@ import SearchIcon from "@/components/UI/Icons/SearchIcon.vue";
 <style scoped>
 .search {
   position: relative;
-  cursor: pointer !important;
 
   .css-icon {
+    --css-icon_right: 0px;
+    --css-icon_top: 0px;
+    --css-icon_width: 40px;
+    --css-icon_height: 40px;
+
     position: absolute;
-    right: 0;
-    top: 0;
+    right: var(--css-icon_right);
+    top: var(--css-icon_top);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+
+    width: var(--css-icon_width);
+    height: var(--css-icon_height);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   input {
-    border: 2px solid var(--color-default);
-    border-radius: var(--border-radius-default);
-    font-size: var(--font-size-default);
-    padding: 0 10px;
+    --input-active_width: 500px;
+    --input_padding-left: 10px;
+    --input_padding-right: 36px;
+
+    transition: all var(--v1-transition_fast);
+
+    border: var(--v1-border-width_default) solid var(--v1-color_default_1);
+    border-radius: var(--v1-border-radius_default);
+
+    font-size: var(--v1-font-size_default);
+
     height: 40px;
-    padding-right: 36px;
     width: 300px;
-    transition: all var(--transition-default);
+
+    padding-left: var(--input_padding-left);
+    padding-right: var(--input_padding-right);
 
     &:hover {
-      border-color: var(--color-active-default);
+      border-color: var(--v1-color_active_1);
     }
 
     &:focus {
-      border-color: var(--color-active-default);
-      width: 500px;
+      border-color: var(--v1-color_active_1);
+      width: var(--input-active_width);
     }
   }
 }

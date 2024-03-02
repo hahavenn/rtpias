@@ -14,41 +14,42 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
 <style>
 :root {
   /* переменные для сайта */
-  --header-size: 60px;
-  --footer-size: 40px;
+  --v1-header-height__desktop: 60px;
+  --v1-footer-height__desktop: 40px;
 
-  --icon-size-default: 24px;
+  --v1-logo-width__desktop: 40px;
+  --v1-logo-height__desktop: 40px;
 
-  --color-default: #d2d2d2;
-  --color-active-default: #7a7a7a;
-  --color-hover-default: #dddddd;
-  --color-hover-link: #696969;
-  --color-white: #fff;
-  --color-black: #000;
-  --color-gray: #888888;
-  --color-error: #c82121;
+  --v1-icon-size_default: 24px;
 
-  --width-desktop: 1400px;
-  --width-tablet: 786px;
-  --width-mobile: 320px;
+  --v1-color_default_1: #d2d2d2;
+  --v1-color_active_1: #7a7a7a;
+  --v1-color_white_1: #ffffff;
+  --v1-color_black_1: #000000;
+  --v1-color_error_1: #c82121;
 
-  --transition-default: 0.15s;
+  --v1-width__desktop: 1400px;
+  --v1-width_tablet: 800px;
+  --v1-width_mobile: 320px;
 
-  --font-size-small: 12px;
-  --font-size-default: 16px;
-  --font-size-medium: 20px;
-  --font-size-big: 30px;
-  --font-size-giant: 40px;
+  --v1-transition_default: 0.15s;
+  --v1-transition_fast: 0.1s;
 
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
+  --v1-font-size_small: 12px;
+  --v1-font-size_default: 16px;
+  --v1-font-size_medium: 20px;
+  --v1-font-size_big: 30px;
+  --v1-font-size_giant: 40px;
 
-  --border-radius-default: 8px;
+  --v1-font-weight_regular: 400;
+  --v1-font-weight_bold: 700;
 
-  --border-width-small: 1px;
-  --border-width-default: 2px;
+  --v1-border-radius_default: 8px;
 
-  --input-height: 44px;
+  --v1-border-width_small: 1px;
+  --v1-border-width_default: 2px;
+
+  --v1-input-button_height_1: 44px;
 
   --z-index_modal: 9999;
 }
@@ -69,13 +70,16 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
 
 html {
   scroll-behavior: smooth;
+
   width: 100%;
   height: 100%;
 
   body {
     margin: 0;
+
     width: inherit;
     height: inherit;
+
     overflow-y: scroll;
   }
 
@@ -84,13 +88,13 @@ html {
   }
 
   a {
-    color: var(--color-black);
+    color: var(--v1-color_black_1);
   }
 }
 
 .icon {
-  width: var(--icon-size-default);
-  height: var(--icon-size-default);
+  width: var(--v1-icon-size_default);
+  height: var(--v1-icon-size_default);
 }
 
 #app {
@@ -98,12 +102,14 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   width: 100%;
   height: 100%;
 
   main {
     flex-grow: 1;
-    width: var(--width-desktop);
+
+    width: var(--v1-width__desktop);
   }
 }
 </style>

@@ -41,14 +41,19 @@ const props = defineProps({
 
 <style scoped>
 .nav_sections {
-  max-width: var(--width-desktop);
+  --nav-sections_margin-top: 40px;
+  --nav-sections_gap: 30px;
+
+  max-width: var(--v1-width__desktop);
   height: 100%;
+
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: flex-start;
   align-content: flex-start;
-  gap: 30px;
-  margin-top: 40px;
-  flex-direction: row;
+  gap: var(--nav-sections_gap);
+
+  margin-top: var(--nav-sections_margin-top);
 }
 </style>

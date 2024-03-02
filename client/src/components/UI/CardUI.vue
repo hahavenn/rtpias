@@ -21,23 +21,33 @@ const props = defineProps({
 
 <style scoped>
 section {
-  border: 2px solid var(--color-default);
-  border-radius: var(--border-radius-default);
-  width: 256px;
-  height: 180px;
-  padding: 10px;
-  cursor: pointer;
+  --card_width: 256px;
+  --card_height: 180px;
+  --card_padding: 10px;
+  --card_gap: 10px;
+
+  border: var(--v1-border-width_default) solid var(--v1-color_default_1);
+  border-radius: var(--v1-border-radius_default);
+
+  width: var(--card_width);
+  height: var(--card_height);
+
+  padding: var(--card_padding);
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: var(--card_gap);
 
   &:hover {
-    border-color: var(--color-active-default);
+    cursor: pointer;
+
+    border-color: var(--v1-color_active_1);
   }
 
   span {
-    font-size: var(--font-size-medium);
-  }
-
-  p {
-    margin-top: 10px;
+    font-size: var(--v1-font-size_medium);
   }
 }
 </style>

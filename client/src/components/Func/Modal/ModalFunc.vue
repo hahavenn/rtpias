@@ -1,7 +1,14 @@
 <template>
-  <div id="modal" @click.self="stylesStore.toggleModalVisibility()" v-show="stylesStore.isModalVisible">
+  <div
+    id="modal"
+    @click.self="stylesStore.toggleModalVisibility()"
+    v-show="stylesStore.isModalVisible"
+  >
     <div class="modal_inner">
-      <div class="modal_close" @click="stylesStore.toggleModalVisibility()">
+      <div
+        class="modal_close"
+        @click="stylesStore.toggleModalVisibility()"
+      >
         <CrossIcon />
       </div>
       <slot></slot>
@@ -47,9 +54,9 @@ const stylesStore = useStylesStore();
 
     padding: var(--padding-value) calc(var(--padding-value) / 2);
 
-    border-radius: var(--border-radius-default);
+    border-radius: var(--v1-border-radius_default);
 
-    background-color: var(--color-white);
+    background-color: var(--v1-color_white_1);
 
     position: relative;
 
@@ -69,7 +76,7 @@ const stylesStore = useStylesStore();
       width: var(--close-button-size);
       height: var(--close-button-size);
 
-      border-top-right-radius: var(--border-radius-default);
+      border-top-right-radius: var(--v1-border-radius_default);
 
       display: flex;
       justify-content: center;
