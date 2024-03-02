@@ -1,21 +1,21 @@
 <template>
   <div class="wrapper">
-    <span class="title">Вход</span>
+    <span class="title">{{ templateData.title }}</span>
     <div class="signIn_block">
       <InputTextUI
         v-model="user.login"
-        :placeholder="'Логин'"
+        :placeholder="templateData.login"
         :required="true"
       />
       <InputTextUI
         v-model="user.password"
-        :placeholder="'Пароль'"
+        :placeholder="templateData.password"
         :required="true"
         :type="'password'"
       />
       <ButtonUI
-        @click="console.log('user instance:', user)"
-        :placeholder="'Войти'"
+        @click="loginHandler"
+        :placeholder="templateData.signIn"
       />
     </div>
   </div>
@@ -27,10 +27,21 @@ import { reactive } from "vue";
 import InputTextUI from "@/components/UI/InputTextUI.vue";
 import ButtonUI from "@/components/UI/ButtonUI.vue";
 
+const templateData = {
+  title: "Вход",
+  login: "Логин",
+  password: "Пароль",
+  signIn: "Войти",
+};
+
 const user = reactive({
   login: "",
   password: "",
 });
+
+function loginHandler() {
+  console.log("user instance:", user);
+}
 </script>
 
 <style scoped>
@@ -48,7 +59,7 @@ const user = reactive({
   gap: var(--wrapper_gap);
 
   .title {
-    font-size: var(--font-size-giant);
+    font-size: var(--v1-font-size_giant);
   }
 
   .signIn_block {
