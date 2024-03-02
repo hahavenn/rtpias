@@ -20,7 +20,7 @@ import IconWrapperUI from "@/components/UI/IconWrapperUI.vue";
 
 import ModalFunc from "@/components/Func/Modal/ModalFunc.vue";
 
-import LoginUser from "@/components/User/LoginUser/LoginUser.vue";
+import LoginUser from "@/components/User/LoginUser.vue";
 
 import useStylesStore from "@/stores/useStylesStore.js";
 import useUserStore from "@/stores/useUserStore";
