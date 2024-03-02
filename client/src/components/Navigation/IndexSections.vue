@@ -1,16 +1,10 @@
 <template>
   <div class="nav_sections">
-    <template v-for="(cardTitle, index) in props.list_title">
+    <template v-for="section in props.sections">
       <CardUI
-        :title="cardTitle"
-        :decription="props?.list_description[index] ?? ''"
-        @click="
-          {
-            if (props?.list_path[index]) {
-              router.push(props.list_path[index]);
-            }
-          }
-        "
+        :title="section.TITLE"
+        :decription="section.DESCRIPTION"
+        @click="cardClickHandler(section.PATH)"
       />
     </template>
   </div>
@@ -23,20 +17,16 @@ import router from "@/router";
 /* этот компонент используется для навигации по сайту через кнопки */
 
 const props = defineProps({
-  // заголовки для каждой карточки
-  list_title: {
-    type: Array,
+  sections: {
+    type: Object,
     required: true,
   },
-  // описания для каждой карточки
-  list_description: {
-    type: Array,
-  },
-  // функции, которые вызываются при нажатии на карточку
-  list_path: {
-    type: Array,
-  },
 });
+
+// функция перенаправления на раздел
+function cardClickHandler(pathToGo) {
+  router.push(pathToGo);
+}
 </script>
 
 <style scoped>

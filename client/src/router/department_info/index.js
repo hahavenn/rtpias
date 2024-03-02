@@ -1,15 +1,15 @@
 // department_info маршрут
-const DEPARTMENT_ROUTE = {
+const DEPARTMENT_INFO_ROUTE = {
   PATH: "/department_info",
   NAME: "department_info",
 };
 
-export { DEPARTMENT_ROUTE };
+export { DEPARTMENT_INFO_ROUTE };
 
 const department_info_routes = [
   {
-    path: DEPARTMENT_ROUTE.PATH,
-    name: DEPARTMENT_ROUTE.NAME,
+    path: DEPARTMENT_INFO_ROUTE.PATH,
+    name: DEPARTMENT_INFO_ROUTE.NAME,
   },
 ];
 
