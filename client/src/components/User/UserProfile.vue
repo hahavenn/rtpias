@@ -2,14 +2,14 @@
   <IconWrapperUI
     :isHover="true"
     :cursorPointer="true"
-    @click="stylesStore.toggleModalVisibility"
+    @click="profileIconHandler"
   >
     <ProfileIcon />
   </IconWrapperUI>
 
   <Teleport to="body">
-    <ModalFunc>
-      <LoginUser v-if="!userStore.isAuth" />
+    <ModalFunc v-if="!userStore.isAuth">
+      <LoginUser />
     </ModalFunc>
   </Teleport>
 </template>
@@ -27,6 +27,10 @@ import useUserStore from "@/stores/useUserStore";
 
 const stylesStore = useStylesStore();
 const userStore = useUserStore();
+
+function profileIconHandler() {
+  stylesStore.toggleModalVisibility();
+}
 </script>
 
 <style scoped></style>

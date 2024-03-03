@@ -1,10 +1,4 @@
-// extra_activities маршрут
-const EXTRA_ACTIVITIES_ROUTE = {
-  PATH: "/extra_activities",
-  NAME: "extra_activities",
-};
-
-export { EXTRA_ACTIVITIES_ROUTE };
+import { EXTRA_ACTIVITIES_ROUTE } from "@/router/constants";
 
 const extra_activities_routes = [
   {

@@ -1,10 +1,4 @@
-// employees маршрут
-const EMPLOYEES_ROUTE = {
-  PATH: "/employees",
-  NAME: "employees",
-};
-
-export { EMPLOYEES_ROUTE };
+import { EMPLOYEES_ROUTE } from "@/router/constants";
 
 const employees_routes = [
   {

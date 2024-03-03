@@ -1,10 +1,4 @@
-// science_directions маршрут
-const SCIENCE_DIRECTIONS_ROUTE = {
-  PATH: "/science_directions",
-  NAME: "science_directions",
-};
-
-export { SCIENCE_DIRECTIONS_ROUTE };
+import { SCIENCE_DIRECTIONS_ROUTE } from "@/router/constants";
 
 const science_directions_routes = [
   {

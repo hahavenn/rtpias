@@ -1,10 +1,4 @@
-// schedule маршрут
-const SCHEDULE_ROUTE = {
-  PATH: "/schedule",
-  NAME: "schedule",
-};
-
-export { SCHEDULE_ROUTE };
+import { SCHEDULE_ROUTE } from "@/router/constants";
 
 const schedule_routes = [
   {

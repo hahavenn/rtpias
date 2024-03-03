@@ -1,10 +1,4 @@
-// job_practice маршрут
-const JOB_PRACTICE_ROUTE = {
-  PATH: "/job_practice",
-  NAME: "job_practice",
-};
-
-export { JOB_PRACTICE_ROUTE };
+import { JOB_PRACTICE_ROUTE } from "@/router/constants";
 
 const job_practice_routes = [
   {

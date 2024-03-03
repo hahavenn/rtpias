@@ -1,38 +1,28 @@
 <template>
   <header>
-    <div class="section">
-      <LogoUI @click="router.push(INDEX_ROUTE.PATH)" />
+    <section>
+      <LogoUI @click="logoUIHandler" />
       <SearchFunc />
-    </div>
-    <div class="section">
-      <SwitcherFunc :toggler="stylesStore.toggleTheme">
-        <template #left>
-          <SunIcon />
-        </template>
-        <template #right>
-          <MoonIcon />
-        </template>
-      </SwitcherFunc>
+    </section>
+    <section>
       <UserProfile />
-    </div>
+    </section>
   </header>
 </template>
 
 <script setup>
 import LogoUI from "@/components/UI/Images/LogoUI.vue";
-import SunIcon from "@/components/UI/Icons/SunIcon.vue";
-import MoonIcon from "@/components/UI/Icons/MoonIcon.vue";
 
 import SearchFunc from "@/components/Func/Search/SearchFunc.vue";
-import SwitcherFunc from "@/components/Func/Switcher/SwitcherFunc.vue";
 
 import UserProfile from "@/components/User/UserProfile.vue";
 
-import useStylesStore from "@/stores/useStylesStore.js";
+import router from "@/router";
+import { INDEX_ROUTE } from "@/router/constants";
 
-import router, { INDEX_ROUTE } from "@/router";
-
-const stylesStore = useStylesStore();
+function logoUIHandler() {
+  router.push(INDEX_ROUTE.PATH);
+}
 </script>
 
 <style scoped>
@@ -48,11 +38,7 @@ header {
 
   border-bottom: var(--v1-border-width_default) solid var(--v1-color_default_1);
 
-  &::nth-child(0) {
-    justify-self: flex-start;
-  }
-
-  .section {
+  section {
     --section_gap: 10px;
 
     display: flex;

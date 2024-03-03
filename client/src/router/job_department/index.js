@@ -1,10 +1,4 @@
-// job_department маршрут
-const JOB_DEPARTMENT_ROUTE = {
-  PATH: "/job_department",
-  NAME: "job_department",
-};
-
-export { JOB_DEPARTMENT_ROUTE };
+import { JOB_DEPARTMENT_ROUTE } from "@/router/constants";
 
 const job_department_routes = [
   {

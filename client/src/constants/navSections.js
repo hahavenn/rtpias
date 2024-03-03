@@ -1,11 +1,13 @@
-import { DEPARTMENT_INFO_ROUTE } from "@/router/department_info";
-import { EMPLOYEES_ROUTE } from "@/router/employees";
-import { EXTRA_ACTIVITIES_ROUTE } from "@/router/extra_activities";
-import { JOB_DEPARTMENT_ROUTE } from "@/router/job_department";
-import { JOB_PRACTICE_ROUTE } from "@/router/job_practice";
-import { SCHEDULE_ROUTE } from "@/router/schedule";
-import { SCIENCE_DIRECTIONS_ROUTE } from "@/router/science_directions";
-import { SUBJECT_ROUTE } from "@/router/subjects";
+import {
+  DEPARTMENT_INFO_ROUTE,
+  EMPLOYEES_ROUTE,
+  EXTRA_ACTIVITIES_ROUTE,
+  JOB_DEPARTMENT_ROUTE,
+  JOB_PRACTICE_ROUTE,
+  SCHEDULE_ROUTE,
+  SCIENCE_DIRECTIONS_ROUTE,
+  SUBJECT_ROUTE,
+} from "@/router/constants";
 
 export const SUBJECT = {
   TITLE: "Предметы",

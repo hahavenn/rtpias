@@ -1,10 +1,4 @@
-// department_info маршрут
-const DEPARTMENT_INFO_ROUTE = {
-  PATH: "/department_info",
-  NAME: "department_info",
-};
-
-export { DEPARTMENT_INFO_ROUTE };
+import { DEPARTMENT_INFO_ROUTE } from "@/router/constants";
 
 const department_info_routes = [
   {

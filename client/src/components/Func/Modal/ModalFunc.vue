@@ -1,13 +1,13 @@
 <template>
   <div
     id="modal"
-    @click.self="stylesStore.toggleModalVisibility()"
+    @click.self="modalCloseHandler"
     v-show="stylesStore.isModalVisible"
   >
     <div class="modal_inner">
       <div
         class="modal_close"
-        @click="stylesStore.toggleModalVisibility()"
+        @click="modalCloseHandler"
       >
         <CrossIcon />
       </div>
@@ -22,6 +22,10 @@ import CrossIcon from "@/components/UI/Icons/CrossIcon.vue";
 import useStylesStore from "@/stores/useStylesStore.js";
 
 const stylesStore = useStylesStore();
+
+function modalCloseHandler() {
+  stylesStore.toggleModalVisibility();
+}
 </script>
 
 <style scoped>
