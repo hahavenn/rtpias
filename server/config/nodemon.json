@@ -1,0 +1,12 @@
+{
+  "restartable": "rs",
+  "verbose": false,
+  "watch": ["*"],
+  "ignore": [".env", "config", ".env.example"],
+  "ext": "js,json",
+  "env": {
+    "APP_MODE": "DEVELOPMENT",
+    "APP_HOST": "localhost",
+    "APP_PORT": 3000
+  }
+}
