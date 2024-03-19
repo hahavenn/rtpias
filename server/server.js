@@ -17,7 +17,7 @@ const fastify = Fastify(fastify_config);
 
 const startServer = async () => {
   try {
-    await fastify.listen({
+    fastify.listen({
       port: process.env.APP_PORT,
       host: process.env.APP_HOST,
     });
