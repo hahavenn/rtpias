@@ -1,11 +1,11 @@
 <template>
-  <div
+  <button
     class="icon_wrapper"
     :class="{ hoverClass: isHover }"
     :style="componentStyle"
   >
     <slot></slot>
-  </div>
+  </button>
 </template>
 
 <script setup>
@@ -50,6 +50,8 @@ const componentStyle = reactive({
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  background-color: transparent;
 }
 
 .hoverClass {

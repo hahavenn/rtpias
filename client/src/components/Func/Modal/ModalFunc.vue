@@ -5,12 +5,12 @@
     v-show="stylesStore.isModalVisible"
   >
     <div class="modal_inner">
-      <div
+      <button
         class="modal_close"
         @click="modalCloseHandler"
       >
         <CrossIcon />
-      </div>
+      </button>
       <slot></slot>
     </div>
   </div>
@@ -81,10 +81,13 @@ function modalCloseHandler() {
       height: var(--close-button-size);
 
       border-top-right-radius: var(--v1-border-radius_default);
+      border: none;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
+      background-color: transparent;
 
       &:hover {
         cursor: pointer;
