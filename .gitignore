@@ -1,6 +1,7 @@
 client/node_modules
 client/dist
 client/package-lock.json
+client/.env.production
 
 server/node_modules
 server/package-lock.json
