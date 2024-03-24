@@ -34,6 +34,7 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
 
   --v1-transition_default: 0.15s;
   --v1-transition_fast: 0.1s;
+  --v1-transition_normal: 1s;
 
   --v1-font-size_small: 12px;
   --v1-font-size_default: 16px;
