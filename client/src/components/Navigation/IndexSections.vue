@@ -52,7 +52,6 @@ onMounted(async () => {
 
 <style scoped>
 .nav_sections {
-  --nav-sections_margin-top: 40px;
   --nav-sections_gap: 30px;
 
   max-width: var(--v1-width__desktop);
@@ -64,7 +63,5 @@ onMounted(async () => {
   justify-content: flex-start;
   align-content: flex-start;
   gap: var(--nav-sections_gap);
-
-  margin-top: var(--nav-sections_margin-top);
 }
 </style>

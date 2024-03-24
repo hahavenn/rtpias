@@ -108,6 +108,10 @@ html {
   height: 100%;
 
   main {
+    --main_padding: 40px;
+
+    padding: var(--main_padding) 0;
+
     flex-grow: 1;
 
     width: var(--v1-width__desktop);
