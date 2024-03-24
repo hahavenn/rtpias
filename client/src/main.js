@@ -1,8 +1,8 @@
 import { createApp } from "vue";
-import App from "./App.vue";
+import App from "@/App.vue";
 
 // import Vue Router instance
-import router from "./router";
+import router from "@/router/router.js";
 
 // import function to create Pinia's middleware
 import { createPinia } from "pinia";

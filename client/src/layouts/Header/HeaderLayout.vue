@@ -11,17 +11,18 @@
 </template>
 
 <script setup>
-import LogoUI from "@/components/UI/Images/LogoUI.vue";
+import LogoUI from "@/components/UI/LogoUI.vue";
 
 import SearchFunc from "@/components/Func/Search/SearchFunc.vue";
 
 import UserProfile from "@/components/User/UserProfile.vue";
 
-import router from "@/router";
-import { INDEX_ROUTE } from "@/router/constants";
+import { INDEX_ROUTE } from "@/router/router.js";
+
+import { routerGoTo_helper } from "@/router/helpers.js";
 
 function logoUIHandler() {
-  router.push(INDEX_ROUTE.PATH);
+  routerGoTo_helper(INDEX_ROUTE.PATH);
 }
 </script>
 
@@ -50,3 +51,4 @@ header {
   }
 }
 </style>
+@/router/router

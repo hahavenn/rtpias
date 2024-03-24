@@ -23,7 +23,7 @@ import ModalFunc from "@/components/Func/Modal/ModalFunc.vue";
 import LoginUser from "@/components/User/LoginUser.vue";
 
 import useStylesStore from "@/stores/useStylesStore.js";
-import useUserStore from "@/stores/useUserStore";
+import useUserStore from "@/stores/useUserStore.js";
 
 const stylesStore = useStylesStore();
 const userStore = useUserStore();
