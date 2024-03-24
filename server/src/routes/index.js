@@ -1,4 +1,4 @@
-import navigation_routes from "./navigation/navigation.js";
+import Navigation_route from "./navigation/navigation.js";
 
 // for register all top-level routes
-export default [navigation_routes];
+export default [Navigation_route];

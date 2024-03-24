@@ -1,4 +1,4 @@
-import { DB_COLLECTION_NAMES } from "../../constants/database.js";
+import { DB_COLLECTION_NAMES } from "../constants/database.js";
 
 // получить все секции навигации
 async function getNavigationList(fastify) {
@@ -8,4 +8,8 @@ async function getNavigationList(fastify) {
   return sections.toArray();
 }
 
-export { getNavigationList };
+const Navigation_service = {
+  getNavigationList,
+};
+
+export default Navigation_service;

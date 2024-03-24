@@ -1,15 +1,15 @@
 /* МАРШРУТЫ НАВИГАЦИИ САЙТА */
 
-import { getNavigationList } from "../../services/navigation/navigation.js";
+import Navigation_service from "../../services/navigation.js";
 
 const NAVIGATION_ROUTE_NAMES = {
   ALL_SECTIONS: "/navigation",
 };
 
-async function navigation_routes(fastify, options) {
+async function Navigation_route(fastify, options) {
   /* handlers */
   async function getNavigationList_handler(req, reply) {
-    const navSections = await getNavigationList(fastify);
+    const navSections = await Navigation_service.getNavigationList(fastify);
     return navSections;
   }
 
@@ -21,4 +21,4 @@ async function navigation_routes(fastify, options) {
   });
 }
 
-export default navigation_routes;
+export default Navigation_route;

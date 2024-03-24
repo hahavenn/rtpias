@@ -1,4 +1,4 @@
-import database_plugin from "./database/database.js";
+import Database_plugin from "./database/database.js";
 
 /* for register all top-level plugins */
-export default [database_plugin];
+export default [Database_plugin];
