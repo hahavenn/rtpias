@@ -1,11 +1,11 @@
-import department_info_routes from "./department_info";
-import employees_routes from "./employees";
-import extra_activities_routes from "./extra_activities";
-import job_department_routes from "./job_department";
-import job_practice_routes from "./job_practice";
-import schedule_routes from "./schedule";
-import science_directions_routes from "./science_directions";
-import subjects_routes from "./subjects";
+import department_info_routes from "@/router/department_info/department_info.js";
+import employees_routes from "@/router/employees/employees.js";
+import extra_activities_routes from "@/router/extra_activities/extra_activities.js";
+import job_department_routes from "@/router/job_department/job_department.js";
+import job_practice_routes from "@/router/job_practice/job_practice.js";
+import schedule_routes from "@/router/schedule/schedule.js";
+import science_directions_routes from "@/router/science_directions/science_directions.js";
+import subjects_routes from "@/router/subjects/subjects.js";
 
 // все маршруты закидываются сюда
 const routes = [

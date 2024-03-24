@@ -1,7 +1,7 @@
 <template>
   <section>
     <span>
-      <b>{{ props.title }}</b>
+      <b>{{ props.name }}</b>
     </span>
     <p v-if="props.decription">{{ props.decription }}</p>
   </section>
@@ -9,7 +9,7 @@
 
 <script setup>
 const props = defineProps({
-  title: {
+  name: {
     required: true,
     type: String,
   },

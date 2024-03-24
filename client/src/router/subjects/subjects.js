@@ -1,4 +1,9 @@
-import { SUBJECT_ROUTE } from "@/router/constants";
+/* subjects маршрут */
+
+const SUBJECT_ROUTE = {
+  PATH: "/subjects",
+  NAME: "subjects",
+};
 
 const subjects_routes = [
   {

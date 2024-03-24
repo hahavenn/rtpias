@@ -1,4 +1,9 @@
-import { SCHEDULE_ROUTE } from "@/router/constants";
+/* schedule маршрут */
+
+const SCHEDULE_ROUTE = {
+  PATH: "/schedule",
+  NAME: "schedule",
+};
 
 const schedule_routes = [
   {

@@ -1,32 +1,53 @@
 <template>
-  <div class="nav_sections">
-    <template v-for="section in props.sections">
+  <div
+    class="nav_sections"
+    v-if="isContentLoaded"
+  >
+    <template v-for="section in allSections">
       <CardUI
-        :title="section.TITLE"
-        :decription="section.DESCRIPTION"
-        @click="cardClickHandler(section.PATH)"
+        :name="section.NAME"
+        :decription="section.DESCRIPTION ?? ''"
+        @click="cardClickHandler(section.ROUTE_PATH)"
       />
     </template>
   </div>
+  <LoaderUI v-else />
 </template>
 
 <script setup>
-import CardUI from "@/components/UI/CardUI.vue";
-import router from "@/router";
-
 /* этот компонент используется для навигации по сайту через кнопки */
 
-const props = defineProps({
-  sections: {
-    type: Object,
-    required: true,
-  },
-});
+import { onMounted, ref } from "vue";
 
-// функция перенаправления на раздел
-function cardClickHandler(pathToGo) {
-  router.push(pathToGo);
+import CardUI from "@/components/UI/CardUI.vue";
+import LoaderUI from "@/components/UI/LoaderUI.vue";
+
+import useNavigationStore from "@/stores/useNavigationStore.js";
+
+import { routerGoTo_helper } from "@/router/helpers.js";
+
+const useNavigation = useNavigationStore();
+
+// все табы для отображения навигации по сайту
+const allSections = ref(null);
+
+// загружен ли контент
+const isContentLoaded = ref(false);
+
+// загружаем все секции
+async function loadSections() {
+  allSections.value = await useNavigation.getNavigationList();
+  isContentLoaded.value = true;
 }
+
+// нажатие на карточку
+function cardClickHandler(cardPath) {
+  routerGoTo_helper(cardPath);
+}
+
+onMounted(async () => {
+  await loadSections();
+});
 </script>
 
 <style scoped>

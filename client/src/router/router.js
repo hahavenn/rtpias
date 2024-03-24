@@ -1,7 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import allRoutes from "./routes";
-import { NAVIGATION_SECTIONS } from "@/constants/navSections";
-import { INDEX_ROUTE } from "./constants";
+import allRoutes from "@/router/routes.js";
+
+// основной маршрут
+export const INDEX_ROUTE = {
+  ALIASES: {
+    HOME: "/home",
+    INDEX: "/index",
+    MAIN: "/main",
+  },
+  PATH: "/",
+  NAME: "index",
+};
 
 // создаем экземпляр роутера
 const router = createRouter({
@@ -13,7 +22,6 @@ const router = createRouter({
       component: () => import("@/components/Navigation/IndexSections.vue"),
       name: INDEX_ROUTE.NAME,
       alias: Object.values(INDEX_ROUTE.ALIASES),
-      props: { sections: NAVIGATION_SECTIONS },
     },
     ...allRoutes,
   ],
