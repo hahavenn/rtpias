@@ -13,7 +13,7 @@ const footerInfo = `${year.value} &#169; ${name.value}`;
 <style scoped>
 footer {
   width: 100%;
-  min-height: var(--v1-footer-height__desktop);
+  min-height: var(--v1-footer_height__desktop);
 
   display: flex;
   align-items: center;

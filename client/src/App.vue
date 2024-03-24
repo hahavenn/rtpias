@@ -14,13 +14,13 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
 <style>
 :root {
   /* переменные для сайта */
-  --v1-header-height__desktop: 60px;
-  --v1-footer-height__desktop: 40px;
+  --v1-header_height__desktop: 60px;
+  --v1-footer_height__desktop: 40px;
 
-  --v1-logo-width__desktop: 40px;
-  --v1-logo-height__desktop: 40px;
+  --v1-logo_width__desktop: 40px;
+  --v1-logo_height__desktop: 40px;
 
-  --v1-icon-size_default: 24px;
+  --v1-icon_size_default: 24px;
 
   --v1-color_default_1: #d2d2d2;
   --v1-color_active_1: #7a7a7a;
@@ -29,8 +29,8 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
   --v1-color_error_1: #c82121;
 
   --v1-width__desktop: 1400px;
-  --v1-width_tablet: 800px;
-  --v1-width_mobile: 320px;
+  --v1-width__tablet: 800px;
+  --v1-width__mobile: 320px;
 
   --v1-transition_default: 0.15s;
   --v1-transition_fast: 0.1s;
@@ -94,8 +94,8 @@ html {
 }
 
 .icon {
-  width: var(--v1-icon-size_default);
-  height: var(--v1-icon-size_default);
+  width: var(--v1-icon_size_default);
+  height: var(--v1-icon_size_default);
 }
 
 #app {

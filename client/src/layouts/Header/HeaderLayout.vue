@@ -31,7 +31,7 @@ header {
   padding: 0 calc((100% - var(--v1-width__desktop)) / 2);
 
   width: 100%;
-  min-height: var(--v1-header-height__desktop);
+  min-height: var(--v1-header_height__desktop);
 
   display: flex;
   align-items: center;

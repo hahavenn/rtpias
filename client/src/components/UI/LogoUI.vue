@@ -36,8 +36,8 @@ const title = ref("РТПиАС");
   }
 
   img {
-    width: var(--v1-logo-width__desktop);
-    height: var(--v1-logo-height__desktop);
+    width: var(--v1-logo_width__desktop);
+    height: var(--v1-logo_height__desktop);
   }
 }
 </style>
