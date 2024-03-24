@@ -2,8 +2,12 @@ import Fastify from "fastify";
 import "dotenv/config";
 
 import { DEVELOPMENT_CONFIG, PRODUCTION_CONFIG } from "./config/fastify.js";
+
 import { APP_MODE } from "./constants/config.js";
 import { ENV_ERRORS } from "./constants/errors.js";
+
+import allPlugins from "./plugins/index.js";
+import allRoutes from "./routes/index.js";
 
 // check mode in .env file
 if (!(process.env.APP_MODE in APP_MODE)) {
@@ -14,6 +18,16 @@ if (!(process.env.APP_MODE in APP_MODE)) {
 const fastify_config =
   process.env.APP_MODE == "DEVELOPMENT" ? DEVELOPMENT_CONFIG : PRODUCTION_CONFIG;
 const fastify = Fastify(fastify_config);
+
+/* plugins */
+for (const plugin of allPlugins) {
+  fastify.register(plugin);
+}
+
+/* routes */
+for (const route of allRoutes) {
+  fastify.register(route);
+}
 
 const startServer = async () => {
   try {
