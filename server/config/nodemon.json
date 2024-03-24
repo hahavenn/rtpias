@@ -6,8 +6,9 @@
   "ext": "js,json",
   "env": {
     "APP_MODE": "DEVELOPMENT",
-    "APP_HOST": "localhost",
+    "APP_HOST": "127.0.0.1",
     "APP_PORT": 3000,
-    "DATABASE_URL": "mongodb://localhost:27017/rtpias-db_test"
+    "DATABASE_URL": "mongodb://127.0.0.1:27017/rtpias-db_test",
+    "CLIENT_URL": "http://127.0.0.1:4000"
   }
 }

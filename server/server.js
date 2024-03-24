@@ -21,12 +21,12 @@ const fastify = Fastify(fastify_config);
 
 /* plugins */
 for (const plugin of allPlugins) {
-  fastify.register(plugin);
+  await fastify.register(plugin);
 }
 
 /* routes */
 for (const route of allRoutes) {
-  fastify.register(route);
+  await fastify.register(route);
 }
 
 const startServer = async () => {
@@ -45,4 +45,4 @@ const startServer = async () => {
   }
 };
 
-startServer();
+await startServer();
