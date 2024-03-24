@@ -5,8 +5,10 @@
     "prod": "node --env-file=.env server.js"
   },
   "dependencies": {
+    "@fastify/mongodb": "^8.0.0",
     "dotenv": "^16.4.5",
-    "fastify": "^4.26.2"
+    "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
