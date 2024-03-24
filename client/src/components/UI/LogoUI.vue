@@ -1,9 +1,15 @@
 <template>
   <div class="logo">
     <img src="/img/logo.png" />
-    <span>РТПиАС</span>
+    <span>{{ title }}</span>
   </div>
 </template>
+
+<script setup>
+import { ref } from "vue";
+
+const title = ref("РТПиАС");
+</script>
 
 <style scoped>
 .logo {
