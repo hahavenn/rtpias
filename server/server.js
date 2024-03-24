@@ -6,8 +6,8 @@ import { DEVELOPMENT_CONFIG, PRODUCTION_CONFIG } from "./config/fastify.js";
 import { APP_MODE } from "./src/constants/config.js";
 import { ENV_ERRORS } from "./src/constants/errors.js";
 
-import allPlugins from "./src/plugins/index.js";
-import allRoutes from "./src/routes/index.js";
+import allPlugins from "./src/plugins/plugins.js";
+import allRoutes from "./src/routes/routes.js";
 
 // check mode in .env file
 if (!(process.env.APP_MODE in APP_MODE)) {
