@@ -9,6 +9,7 @@ const science_directions_routes = [
   {
     path: SCIENCE_DIRECTIONS_ROUTE.PATH,
     name: SCIENCE_DIRECTIONS_ROUTE.NAME,
+    component: () => import("@/views/science_directions/ScienceDirectionsView.vue"),
   },
 ];
 

@@ -9,6 +9,7 @@ const extra_activities_routes = [
   {
     path: EXTRA_ACTIVITIES_ROUTE.PATH,
     name: EXTRA_ACTIVITIES_ROUTE.NAME,
+    component: () => import("@/views/extra_activities/ExtraActivitiesView.vue"),
   },
 ];
 

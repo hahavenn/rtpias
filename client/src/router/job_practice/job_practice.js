@@ -9,6 +9,7 @@ const job_practice_routes = [
   {
     path: JOB_PRACTICE_ROUTE.PATH,
     name: JOB_PRACTICE_ROUTE.NAME,
+    component: () => import("@/views/job_practice/JobPractice.vue"),
   },
 ];
 

@@ -9,6 +9,7 @@ const schedule_routes = [
   {
     path: SCHEDULE_ROUTE.PATH,
     name: SCHEDULE_ROUTE.NAME,
+    component: () => import("@/views/schedule/ScheduleView.vue"),
   },
 ];
 

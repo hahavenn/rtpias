@@ -9,6 +9,7 @@ const subjects_routes = [
   {
     path: SUBJECT_ROUTE.PATH,
     name: SUBJECT_ROUTE.NAME,
+    component: () => import("@/views/subjects/SubjectsView.vue"),
   },
 ];
 

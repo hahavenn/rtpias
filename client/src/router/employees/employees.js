@@ -9,6 +9,7 @@ const employees_routes = [
   {
     path: EMPLOYEES_ROUTE.PATH,
     name: EMPLOYEES_ROUTE.NAME,
+    component: () => import("@/views/employees/EmployeesView.vue"),
   },
 ];
 

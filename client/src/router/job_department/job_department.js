@@ -9,6 +9,7 @@ const job_department_routes = [
   {
     path: JOB_DEPARTMENT_ROUTE.PATH,
     name: JOB_DEPARTMENT_ROUTE.NAME,
+    component: () => import("@/views/job_department/JobDepartmentView.vue"),
   },
 ];
 

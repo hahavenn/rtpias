@@ -9,6 +9,7 @@ const department_info_routes = [
   {
     path: DEPARTMENT_INFO_ROUTE.PATH,
     name: DEPARTMENT_INFO_ROUTE.NAME,
+    component: () => import("@/views/department_info/DepartmentInfoView.vue"),
   },
 ];
 
