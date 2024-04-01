@@ -19,7 +19,7 @@ const router = createRouter({
     // основной маршрут
     {
       path: INDEX_ROUTE.PATH,
-      component: () => import("@/components/Navigation/IndexSections.vue"),
+      component: () => import("@/views/IndexView.vue"),
       name: INDEX_ROUTE.NAME,
       alias: Object.values(INDEX_ROUTE.ALIASES),
     },

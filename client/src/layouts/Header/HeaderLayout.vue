@@ -5,7 +5,7 @@
       <SearchFunc />
     </section>
     <section>
-      <UserProfile />
+      <ProfileUser />
     </section>
   </header>
 </template>
@@ -15,7 +15,7 @@ import LogoUI from "@/components/UI/LogoUI.vue";
 
 import SearchFunc from "@/components/Func/Search/SearchFunc.vue";
 
-import UserProfile from "@/components/User/UserProfile.vue";
+import ProfileUser from "@/components/User/ProfileUser.vue";
 
 import { INDEX_ROUTE } from "@/router/router.js";
 
