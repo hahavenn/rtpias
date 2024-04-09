@@ -1,8 +1,8 @@
 // convert ms to hh:mm:ss
-export function convertMs_helper(ms) {
-  const seconds = Math.floor((ms / 1000) % 60);
-  const minutes = Math.floor((ms / (1000 * 60)) % 60);
-  const hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
+export function dateToTime_helper(date) {
+  let seconds = date.getSeconds();
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
 
   hours = hours < 10 ? "0" + hours : hours;
   minutes = minutes < 10 ? "0" + minutes : minutes;
