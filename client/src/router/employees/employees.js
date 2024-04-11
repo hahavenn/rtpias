@@ -13,4 +13,5 @@ const employees_routes = [
   },
 ];
 
+export { EMPLOYEES_ROUTE };
 export default employees_routes;

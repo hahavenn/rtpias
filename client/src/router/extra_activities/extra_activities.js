@@ -13,4 +13,5 @@ const extra_activities_routes = [
   },
 ];
 
+export { EXTRA_ACTIVITIES_ROUTE };
 export default extra_activities_routes;

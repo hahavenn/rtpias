@@ -13,4 +13,5 @@ const subjects_routes = [
   },
 ];
 
+export { SUBJECT_ROUTE };
 export default subjects_routes;

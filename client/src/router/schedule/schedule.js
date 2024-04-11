@@ -13,4 +13,5 @@ const schedule_routes = [
   },
 ];
 
+export { SCHEDULE_ROUTE };
 export default schedule_routes;

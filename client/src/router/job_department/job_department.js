@@ -13,4 +13,5 @@ const job_department_routes = [
   },
 ];
 
+export { JOB_DEPARTMENT_ROUTE };
 export default job_department_routes;

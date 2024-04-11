@@ -13,4 +13,5 @@ const job_practice_routes = [
   },
 ];
 
+export { JOB_PRACTICE_ROUTE };
 export default job_practice_routes;

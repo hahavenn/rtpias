@@ -13,4 +13,5 @@ const science_directions_routes = [
   },
 ];
 
+export { SCIENCE_DIRECTIONS_ROUTE };
 export default science_directions_routes;

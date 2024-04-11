@@ -13,4 +13,5 @@ const department_info_routes = [
   },
 ];
 
+export { DEPARTMENT_INFO_ROUTE };
 export default department_info_routes;
