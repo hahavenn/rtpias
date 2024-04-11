@@ -1,10 +1,11 @@
 /* SUBJECTS SERVICE */
 import logger_util from "@/utils/logger";
+import { SUBJECT_ROUTE } from "@/router/subjects/subjects";
 
 class Subjects_service {
   // эндпойнты
   static #ENDPOINTS = {
-    BASE_URL: `${import.meta.env.VITE_SERVER_URL}/subjects`,
+    BASE_URL: `${import.meta.env.VITE_SERVER_URL}${SUBJECT_ROUTE.PATH}`,
   };
 
   // сообщения для логирования
