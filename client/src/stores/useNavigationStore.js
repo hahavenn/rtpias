@@ -25,11 +25,15 @@ export default defineStore("navigationStore", () => {
     if (_navigationList.value.length === 0 || force) {
       const response = await Navigation_service.getNavigationList();
 
-      for (const section of response) {
-        _navigationList.value.push({
-          ...section,
-          ROUTE_PATH: allRoutes.find((route) => route.name === section.ROUTE_NAME).path,
-        });
+      if (response !== null) {
+        for (const section of response) {
+          _navigationList.value.push({
+            ...section,
+            ROUTE_PATH: allRoutes.find((route) => route.name === section.ROUTE_NAME).path,
+          });
+        }
+      } else {
+        _navigationList.value = response ?? [];
       }
     }
 
