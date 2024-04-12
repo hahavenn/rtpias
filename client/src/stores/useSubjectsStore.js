@@ -5,6 +5,8 @@ import { ref } from "vue";
 
 import Subjects_service from "@/services/subjects.js";
 
+import { SUBJECT_ROUTE } from "@/router/subjects/subjects";
+
 import useStylesStore from "@/stores/useStylesStore.js";
 const useStyles = useStylesStore();
 
@@ -26,6 +28,13 @@ export default defineStore("subjectsStore", () => {
       const response = await Subjects_service.getSubjects();
 
       _subjects.value = response ?? [];
+    }
+
+    // добавляем ссылку для каждого предмета
+    if (_subjects.value.length !== 0) {
+      for (const subject of _subjects.value) {
+        subject.link = `${SUBJECT_ROUTE.PATH}/${SUBJECT_ROUTE.NAME}_${subject.SUBJECT_ID}`;
+      }
     }
 
     useStyles.isContentLoaded = true;
