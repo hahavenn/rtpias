@@ -80,8 +80,6 @@ html {
 
     width: inherit;
     height: inherit;
-
-    overflow-y: scroll;
   }
 
   input {
@@ -115,6 +113,8 @@ html {
     flex-grow: 1;
 
     width: var(--v1-width__desktop);
+
+    overflow: hidden;
   }
 }
 </style>
