@@ -15,6 +15,8 @@ function alphabetSort_helper(arrToSort, comparisonField, returnGrouped = false) 
   // создаем копию входного массива (чтобы не менять изначальный)
   const arrSort = arrToSort;
 
+  if (arrSort.length === 0) return [];
+
   // сортируем по буквам
   arrSort.sort((a, b) => {
     switch (true) {
