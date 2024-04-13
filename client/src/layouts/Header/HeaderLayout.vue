@@ -28,6 +28,12 @@ function logoUIHandler() {
 
 <style scoped>
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: #fff;
+
   padding: 0 calc((100% - var(--v1-width__desktop)) / 2);
 
   width: 100%;

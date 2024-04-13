@@ -70,6 +70,9 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
 }
 
 html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
   scroll-behavior: smooth;
 
   width: 100%;
@@ -108,13 +111,12 @@ html {
   main {
     --main_padding: 40px;
 
-    padding: var(--main_padding) 0;
+    padding: calc(var(--v1-header_height__desktop) + var(--main_padding)) 0
+      calc(var(--v1-footer_height__desktop) + var(--main_padding));
 
     flex-grow: 1;
 
     width: var(--v1-width__desktop);
-
-    overflow: hidden;
   }
 }
 </style>
