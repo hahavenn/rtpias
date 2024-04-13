@@ -33,7 +33,7 @@ export default defineStore("subjectsStore", () => {
     // добавляем ссылку для каждого предмета
     if (_subjects.value.length !== 0) {
       for (const subject of _subjects.value) {
-        subject.LINK = `${SUBJECT_ROUTE.PATH}/${SUBJECT_ROUTE.NAME}_${subject.SUBJECT_ID}`;
+        subject.LINK = `${SUBJECT_ROUTE.PATH}/${subject.SUBJECT_ID}`;
       }
     }
 
