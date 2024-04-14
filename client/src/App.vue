@@ -27,6 +27,8 @@ import FooterLayout from "@/layouts/Footer/FooterLayout.vue";
   --v1-color_white_1: #ffffff;
   --v1-color_black_1: #000000;
   --v1-color_error_1: #c82121;
+  --v1-color_blue_default: #0f0f69;
+  --v1-color_red_default: #c10831;
 
   --v1-width__desktop: 1400px;
   --v1-width__tablet: 800px;
@@ -99,6 +101,10 @@ html {
   height: var(--v1-icon_size_default);
 }
 
+ul {
+  list-style: none;
+}
+
 #app {
   /* конец переменных для сайта */
   display: flex;
@@ -109,7 +115,7 @@ html {
   height: 100%;
 
   main {
-    --main_padding: 40px;
+    --main_padding: 20px;
 
     padding: calc(var(--v1-header_height__desktop) + var(--main_padding)) 0
       calc(var(--v1-footer_height__desktop) + var(--main_padding));
