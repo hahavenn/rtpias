@@ -1,8 +1,8 @@
 /* сортировка массива объектов по буквам */
 function alphabetSort_helper(arrToSort, comparisonField, returnGrouped = false) {
   /* 
-    arrToSort - массив, который надо отсортировать
-    comparisonField - поле, по которому идёт сравнение
+    arrToSort - массив объектов, который надо отсортировать
+    comparisonField - поле в объекте, по которому идёт сравнение
     returnGrouped - нужна ли группировка по буквам
       если false -> возвращается отсортированный массив с заданным видом
       если true -> возвращается объект в виде:
@@ -13,12 +13,23 @@ function alphabetSort_helper(arrToSort, comparisonField, returnGrouped = false) 
   */
 
   // создаем копию входного массива (чтобы не менять изначальный)
-  const arrSort = arrToSort;
+  const arrToReturn = arrToSort;
 
-  if (arrSort.length === 0) return [];
+  // если на вход пустой массив
+  if (arrToReturn.length === 0) return [];
 
   // сортируем по буквам
-  arrSort.sort((a, b) => {
+  sortArrayOfObjectsByLetters(arrToReturn, comparisonField);
+
+  // если нужно сгруппировать
+  if (returnGrouped) return sortObjects(arrToReturn, comparisonField);
+
+  return arrToReturn;
+}
+
+// сортировка по буквам
+function sortArrayOfObjectsByLetters(arrToSort, comparisonField) {
+  arrToSort.sort((a, b) => {
     switch (true) {
       case a[comparisonField] < b[comparisonField]: {
         return -1;
@@ -31,29 +42,27 @@ function alphabetSort_helper(arrToSort, comparisonField, returnGrouped = false) 
       }
     }
   });
+}
 
-  // если нужно сгруппировать
-  if (returnGrouped) {
-    // устанавливаем массив для возврата
-    let objToReturn = {};
+// группировка по буквам
+function sortObjects(arrToSort, comparisonField) {
+  // устанавливаем массив для возврата
+  let objToReturn = {};
 
-    for (const instance of arrSort) {
-      // имя группы
-      const groupName = instance[comparisonField][0].toLowerCase();
-      // есть ли уже такая группа
-      if (objToReturn?.[groupName]) {
-        objToReturn[groupName].push(instance);
-        continue;
-      }
-
-      // группы нет
-      objToReturn[groupName] = [instance];
+  for (const instance of arrToSort) {
+    // имя группы
+    const groupName = instance[comparisonField][0].toLowerCase();
+    // есть ли уже такая группа
+    if (objToReturn?.[groupName]) {
+      objToReturn[groupName].push(instance);
+      continue;
     }
 
-    return objToReturn;
+    // группы нет
+    objToReturn[groupName] = [instance];
   }
 
-  return arrSort;
+  return objToReturn;
 }
 
 export default alphabetSort_helper;
