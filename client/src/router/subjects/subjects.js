@@ -1,17 +1,17 @@
 /* subjects маршрут */
 
-const SUBJECT_ROUTE = {
+const SUBJECTS_ROUTE = {
   PATH: "/subjects",
   NAME: "subjects",
 };
 
 const subjects_routes = [
   {
-    path: SUBJECT_ROUTE.PATH,
-    name: SUBJECT_ROUTE.NAME,
+    path: SUBJECTS_ROUTE.PATH,
+    name: SUBJECTS_ROUTE.NAME,
     component: () => import("@/views/subjects/SubjectsView.vue"),
   },
 ];
 
-export { SUBJECT_ROUTE };
+export { SUBJECTS_ROUTE };
 export default subjects_routes;
