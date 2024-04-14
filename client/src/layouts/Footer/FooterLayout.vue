@@ -13,6 +13,7 @@ const footerInfo = `${year.value} &#169; ${name.value}`;
 <style scoped>
 footer {
   background-color: #fff;
+  box-shadow: 0px -12px 12px #fff;
 
   position: fixed;
   bottom: 0;
