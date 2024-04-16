@@ -5,4 +5,9 @@ function routerGoTo_helper(pathToGo) {
   router.push(pathToGo);
 }
 
-export { routerGoTo_helper };
+// получение определенного параметра из маршрута
+function getRouteParam(paramName) {
+  return router.currentRoute.value.params?.[paramName];
+}
+
+export { routerGoTo_helper, getRouteParam };
