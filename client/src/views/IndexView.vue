@@ -18,13 +18,14 @@
 /* этот компонент используется для навигации по сайту через кнопки */
 
 import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
 
 import CardUI from "@/components/UI/CardUI.vue";
 import LoaderUI from "@/components/UI/LoaderUI.vue";
 
 import useNavigationStore from "@/stores/useNavigationStore.js";
 
-import { routerGoTo_helper } from "@/router/helpers.js";
+const router = useRouter();
 
 const useNavigation = useNavigationStore();
 
@@ -42,7 +43,7 @@ async function loadSections() {
 
 // нажатие на карточку
 function cardClickHandler(cardPath) {
-  routerGoTo_helper(cardPath);
+  router.push(cardPath);
 }
 
 onMounted(async () => {
