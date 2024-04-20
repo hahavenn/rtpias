@@ -11,36 +11,39 @@ import useStylesStore from "@/stores/useStylesStore.js";
 const useStyles = useStylesStore();
 
 export default defineStore("subjectsStore", () => {
+  // конфиг
+  const storeConfig = {
+    INSTANCES_FIELD_NAMES: {
+      _id: "_id",
+      NAME: "NAME",
+      SUBJECT_ID: "SUBJECT_ID",
+      LINK: "LINK",
+    },
+  };
+
   // список всех предметов
-  const _subjects = ref([]);
+  const subjects = ref([]);
 
-  // получение всех предметов
-  async function getSubjects(options = {}) {
-    /* 
-      force - флаг принудительной загрузки предметов
-    */
-    const { force = false } = options;
-
+  // запрос предметов с сервера
+  async function fetchSubjects() {
     useStyles.isContentLoaded = false;
 
-    // если мы не загружали список предметов
-    if (_subjects.value.length === 0 || force) {
-      const response = await Subjects_service.getSubjects();
+    const response = await Subjects_service.getSubjects();
 
-      _subjects.value = response ?? [];
-    }
+    // если у нас пустой ответ - проверяем наличие в сторе, если есть - возвращаем его
+    subjects.value = response ?? (subjects.value.length !== 0 ? subjects.value : []);
 
     // добавляем ссылку для каждого предмета
-    if (_subjects.value.length !== 0) {
-      for (const subject of _subjects.value) {
-        subject.LINK = `${SUBJECTS_ROUTE.PATH}/${subject.SUBJECT_ID}`;
+    if (subjects.value.length !== 0) {
+      for (const subject of subjects.value) {
+        subject[
+          storeConfig.INSTANCES_FIELD_NAMES.LINK
+        ] = `${SUBJECTS_ROUTE.PATH}/${subject.SUBJECT_ID}`;
       }
     }
 
     useStyles.isContentLoaded = true;
-
-    return _subjects.value;
   }
 
-  return { getSubjects };
+  return { storeConfig, subjects, fetchSubjects };
 });
