@@ -1,11 +1,11 @@
 <template>
-  <GroupListUI :groupsObject="groupedSubjects" />
+  <AlphabetListUI :groupsObject="groupedSubjects" />
 </template>
 
 <script setup>
 import { computed } from "vue";
 
-import GroupListUI from "@/components/UI/GroupListUI/GroupListUI.vue";
+import AlphabetListUI from "@/components/UI/AlphabetListUI/AlphabetListUI.vue";
 
 import alphabetSort_helper from "@/helpers/alphabetSort.js";
 
