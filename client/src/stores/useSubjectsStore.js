@@ -7,9 +7,6 @@ import Subjects_service from "@/services/subjects.js";
 
 import { SUBJECTS_ROUTE } from "@/router/subjects/subjects";
 
-import useStylesStore from "@/stores/useStylesStore.js";
-const useStyles = useStylesStore();
-
 export default defineStore("subjectsStore", () => {
   // конфиг
   const storeConfig = {
@@ -26,8 +23,6 @@ export default defineStore("subjectsStore", () => {
 
   // запрос предметов с сервера
   async function fetchSubjects() {
-    useStyles.isContentLoaded = false;
-
     const response = await Subjects_service.getSubjects();
 
     // если у нас пустой ответ - проверяем наличие в сторе, если есть - возвращаем его
@@ -41,8 +36,6 @@ export default defineStore("subjectsStore", () => {
         ] = `${SUBJECTS_ROUTE.PATH}/${subject.SUBJECT_ID}`;
       }
     }
-
-    useStyles.isContentLoaded = true;
   }
 
   return { storeConfig, subjects, fetchSubjects };
