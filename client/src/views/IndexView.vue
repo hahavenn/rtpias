@@ -17,7 +17,7 @@
 <script setup>
 /* этот компонент используется для навигации по сайту через кнопки */
 
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 
 import CardUI from "@/components/UI/CardUI.vue";
@@ -27,17 +27,17 @@ import useNavigationStore from "@/stores/useNavigationStore.js";
 
 const router = useRouter();
 
-const useNavigation = useNavigationStore();
+const navigationStore = useNavigationStore();
 
 // все табы для отображения навигации по сайту
-const allSections = ref(null);
+const allSections = computed(() => navigationStore.navigationList);
 
 // загружен ли контент
 const isContentLoaded = ref(false);
 
 // загружаем все секции
 async function loadSections() {
-  allSections.value = await useNavigation.getNavigationList();
+  await navigationStore.fetchNavigationList();
   isContentLoaded.value = true;
 }
 
